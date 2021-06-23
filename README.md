@@ -8,7 +8,7 @@ Docker is a tool that enables us to run an application in an isolated environmen
 ## Running Turtlesim ROS Node on Docker
 
 1) Install Docker from [here](https://docs.docker.com/engine/install/)
-2) Check if Docker properly install by running in Docker Terminal: \
+2) Check if Docker properly install by running in Docker Terminal: 
 ```
 docker run hello-world
 ```
