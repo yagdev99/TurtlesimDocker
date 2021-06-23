@@ -10,11 +10,11 @@ Docker is a tool that enables us to run an application in an isolated environmen
 1) Install Docker from [here](https://docs.docker.com/engine/install/)
 2) Check if Docker properly install by running in Docker Terminal: \
 ```
-$ docker run hello-world
+docker run hello-world
 ```
 3) Now run: 
 ```
-$ sudo docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --name roslocal -it ros:melodic /bin/bash
+sudo docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --name roslocal -it ros:melodic /bin/bash
 ``` 
 This step will take some time so be patient and ensure internet connectivity. 
 
@@ -33,39 +33,39 @@ This step will take some time so be patient and ensure internet connectivity.
 
     First update the container using
     ```
-    $ apt-get update
+    apt-get update
     ```
 
 
     
     To install Turtlesim run:
     ```
-    $ sudo apt-get install ros-melodic-turtlesim
+    sudo apt-get install ros-melodic-turtlesim
     ```
 
 5) To open another terminal for the same instance of `roslocal` container, run: 
     ```
-    $ docker exec -it roslocal bash
+    docker exec -it roslocal bash
     ```
     For every terminal you open make sure to source:
     ```
-    $ source /opt/ros/melodic/setup.bash
+    source /opt/ros/melodic/setup.bash
     ```
     
 7) To start ROS Master run:
     ```
-    $ roscore
+    roscore
     ```
 
     To start turtlesim node run:
 
     ```
-    $ rosrun turtlesim turtlesim_node
+    rosrun turtlesim turtlesim_node
     ```
 
     To start turtlesim tele-operation run:
     ```
-    $ rosrun turtlesim turtle_teleop_key
+    rosrun turtlesim turtle_teleop_key
     ```
 
 
